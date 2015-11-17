@@ -24,7 +24,8 @@ Things I've learned about IE that you wouldn't normally expect... among other cr
 
 #### Measure distance between top of document and top of element
 **normal (with jQuery):**
-  `$(element).offset().top`
+`$(element).offset().top`
+
 or (without jQuery), you need to add up all the parents offsets to get the total offset to top of document:
 ```
 function findTotalOffset(element) {
