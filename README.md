@@ -40,3 +40,36 @@ function findTotalOffset(element) {
 }
 ```
 _note: IE measures it as the distance to the top of the window so it is advisable to cache all of the offsetTop values on pageload to provide accurate measurements of scroll points._
+
+####2 Columns with equal height (without table and table-cell)####
+basic markup (slim)
+```
+.container
+  .col.col--1
+    .content a little content
+  .col.col--2
+    .content
+      .content__row
+      .content__row
+```
+
+css to accompany:
+```
+.container {
+  display: block;
+  position: relative;
+}
+
+.col {
+  width: 50%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.col--2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+```
