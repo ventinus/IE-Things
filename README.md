@@ -51,6 +51,7 @@ basic markup (slim)
     .content
       .content__row
       .content__row
+      .content__row
 ```
 
 css to accompany:
@@ -63,7 +64,10 @@ css to accompany:
 .col {
   width: 50%;
   height: 100%;
-  min-height: 100%;
+}
+
+.col--1 {
+  min-height: 500px; /* or whatever you need */
 }
 
 .col--2 {
@@ -71,5 +75,15 @@ css to accompany:
   right: 0;
   top: 0;
   bottom: 0;
+}
+
+.content {
+  height: 100%;
+}
+
+.content__row {
+  height: 33.33333%;
+  display: inline-block;
+  width: 100%;
 }
 ```
