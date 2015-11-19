@@ -83,7 +83,6 @@ css to accompany:
 
 .content__row {
   height: 33.33333%;
-  display: inline-block;
-  width: 100%;
+  display: block;
 }
 ```
