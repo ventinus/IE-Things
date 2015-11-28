@@ -82,7 +82,7 @@ css to accompany:
 }
 
 .content__row {
-  height: 33.33333%;
   display: block;
+  height: calc(100% / 3);
 }
 ```
