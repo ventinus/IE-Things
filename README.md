@@ -34,7 +34,7 @@ function findTotalOffset(element) {
     do {
       ol += element.offsetLeft;
       ot += element.offsetTop;
-    }while (element = element.offsetParent);
+    } while (element = element.offsetParent);
   }
   return {left : ol, top : ot};
 }
