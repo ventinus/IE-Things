@@ -86,3 +86,21 @@ css to accompany:
   height: calc(100% / 3);
 }
 ```
+
+####Using inline-block and font-size 0####
+**Issue:** IE-10 has trouble resizing when you calculate the width of the elements meant to be next to each other.
+
+For example, you would normally...
+```
+.container {
+  display: block;
+  font-size: 0;
+}
+
+.container > * {
+  display: inline-block;
+  font-size: initial;
+  width: calc(100% / 3);
+}
+```
+This results in basically every other pixel of resizing in pushing the last element to the next row rather than keeping it all together and inline. I believe the issue may lie in the `font-size: initial;` part but more research is needed. For now, a workaround is to change the width calculation of the children to `width: calc(99.999% / 3);` so you only end up losing .003% or something similarly minimal and unnoticeable.
